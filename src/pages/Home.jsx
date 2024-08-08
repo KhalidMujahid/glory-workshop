@@ -92,7 +92,7 @@ const Home = () => {
                 <p>
                     {post.body}
                 </p>
-                <a class="btn btn-link p-0" href="">Read More <i class="fa fa-angle-right"></i></a>
+                <Link class="btn btn-link p-0" to={`/blog/${post.id}`}>Read More <i class="fa fa-angle-right"></i></Link>
             </div>
         </div>
                 ))}
