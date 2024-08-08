@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import carousel1 from "../img/carousel-1.jpg";
 import carousel2 from "../img/carousel-2.jpg";
 import carousel3 from "../img/carousel-3.jpg";
@@ -9,50 +10,24 @@ import blog5 from "../img/blog-5.jpg";
 import blog6 from "../img/blog-6.jpg";
 import profile from "../img/profile.jpg";
 
-
-
-
 const Home = () => {
   return (
-    <div class="wrapper">
-        <div class="sidebar">
-            <div class="sidebar-text d-flex flex-column h-100 justify-content-center text-center">
-                <img class="mx-auto d-block w-75 bg-primary img-fluid rounded-circle mb-4 p-3" src={profile} alt="Image" />
-                <h1 class="font-weight-bold">My Girlfriend</h1>
-                <p class="mb-4">
-                    Justo stet no accusam stet invidunt sanctus magna clita vero eirmod, sit sit labore dolores lorem. Lorem at sit dolor dolores sed diam justo
-                </p>
-                <div class="d-flex justify-content-center mb-5">
-                    <a class="btn btn-outline-primary mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-primary mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-primary mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-primary mr-2" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-                {/* <a href="" class="btn btn-lg btn-block btn-primary mt-auto">Hire Me</a> */}
-            </div>
-            <div class="sidebar-icon d-flex flex-column h-100 justify-content-center text-right">
-                <i class="fas fa-2x fa-angle-double-right text-primary"></i>
-            </div>
-        </div>
+    <div class="">
         <div class="content">
             <div class="container p-0">
                 <nav class="navbar navbar-expand-lg bg-secondary navbar-dark">
-                    <a href="" class="navbar-brand d-block d-lg-none">Navigation</a>
+                    <h4 class="navbar-brand d-block d-lg-none">
+                      Menu
+                    </h4>
                     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav m-auto">
-                            <a href="/" class="nav-item nav-link active">Home</a>
-                            <a href="about.html" class="nav-item nav-link">About</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                                <div class="dropdown-menu">
-                                    <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                                    <a href="single.html" class="dropdown-item">Blog Detail</a>
-                                </div>
-                            </div>
-                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <Link to="/" class="nav-item nav-link active">Home</Link>
+                            <Link to="/about" class="nav-item nav-link">About</Link>
+                        
+                            <Link to="/contact" class="nav-item nav-link">Contact</Link>
                         </div>
                     </div>
                 </nav>
