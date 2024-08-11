@@ -8,17 +8,26 @@ import axios from "axios";
 
 const Home = () => {
     const [posts, setPosts] = useState([]);
+    const [loading,setLoading] = useState(false);
 
     const fetchData = async () => {
+        setLoading(true);
         const response = await axios.get("https://3816e87c-512b-4c0b-bf87-90d4b06d25ff-00-3f90mezg3jhq4.worf.repl.co/api/posts");
         if (response.status === 200) {
             setPosts(response.data);
+            setLoading(false);
+        } else {
+            setLoading(false);
         }
     };
 
     useEffect(() => {
         fetchData();
     }, []);
+
+    if(loading){
+        return <h1>Loading...</h1>
+    }
 
     return (
         <div class="">
