@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import profile from "../img/profile.jpg";
-import about from "../img/about.jpg";
+import about from "../img/glory.jpg";
 
 const About = () => {
   return (
