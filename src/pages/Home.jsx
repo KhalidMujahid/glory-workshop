@@ -12,7 +12,7 @@ const Home = () => {
 
     const fetchData = async () => {
         setLoading(true);
-        const response = await axios.get("https://3816e87c-512b-4c0b-bf87-90d4b06d25ff-00-3f90mezg3jhq4.worf.repl.co/api/posts");
+        const response = await axios.get("https://personal-blog-api-or8e.onrender.com/api/posts");
         if (response.status === 200) {
             setPosts(response.data);
             setLoading(false);
